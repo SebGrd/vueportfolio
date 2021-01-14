@@ -14,6 +14,7 @@ export default {
 }
 </script>
 
+<style src="@/style/style.css"></style>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
