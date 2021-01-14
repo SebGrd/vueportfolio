@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <main>
-      <router-view/>
-    </main>
+    <router-view/>
   </div>
 </template>
 
@@ -15,17 +13,3 @@ export default {
 </script>
 
 <style src="@/style/style.css"></style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
-
-*{
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Nunito, Ubuntu, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-</style>
