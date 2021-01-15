@@ -4,7 +4,9 @@
     <nav class="site-header__nav">
       <ul class="site-header__nav__list">
         <li class="site-header__nav__list__item" v-for="(route, index) in this.$router.options.routes" :key="index">
-          <router-link class="site-header__nav__list__item__link" :to="route.path">{{ route.name }}</router-link>
+          <router-link class="site-header__nav__list__item__link" v-if="route.meta.inHeader" :to="route.path">
+            {{ route.name }}
+          </router-link>
         </li>
       </ul>
     </nav>
