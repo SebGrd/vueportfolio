@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header" id="header">
+  <header :class="{'site-header': true, 'scrolled': this.scrolled}" id="header">
     <a href="/" class="site-header__title"><b>Sébastien Gaudard</b></a>
     <nav class="site-header__nav">
       <ul class="site-header__nav__list">
@@ -14,6 +14,22 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      scrolled: false,
+    };
+  },
+  methods: {
+    isScrolled() {
+      this.scrolled = window.scrollY > 100
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.isScrolled)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.isScrolled);
+  }
 }
 </script>
 
